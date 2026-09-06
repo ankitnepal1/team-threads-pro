@@ -46,7 +46,7 @@ export function ProductCard({ product }: { product: Product }) {
 
         <p className="flex items-baseline gap-2">
           <span className="font-display text-2xl font-bold text-primary">
-            Rs. {product.price.toLocaleString()}
+            Rs. {price.toLocaleString()}
           </span>
           {product.oldPrice && (
             <span className="text-sm text-muted-foreground line-through">
