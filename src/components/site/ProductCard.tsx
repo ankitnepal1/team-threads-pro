@@ -25,8 +25,11 @@ export function ProductCard({ product }: { product: Product }) {
 
       <div className="flex flex-1 flex-col gap-3 p-4">
         <div className="min-w-0">
-          <p className="text-xs uppercase tracking-wide text-muted-foreground">
-            {product.club} · {product.sport}
+          <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs uppercase tracking-wide text-muted-foreground">
+            <span>{product.club} · {product.sport}</span>
+            <span className="inline-flex items-center gap-1 font-semibold text-primary">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary" aria-hidden="true" /> In Stock
+            </span>
           </p>
           <h3 className="mt-1 font-display text-xl font-semibold leading-tight">{product.name}</h3>
         </div>
