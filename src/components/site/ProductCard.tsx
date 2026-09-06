@@ -2,8 +2,18 @@ import { useState } from "react";
 import { MessageCircle } from "lucide-react";
 import { whatsappLink, type Product } from "@/data/products";
 
+const BASE_PRICE = 1299;
+const STEP_PRICE = 300;
+
+export function sizePrice(size: string): number {
+  const order = ["S", "M", "L", "XL", "XXL"];
+  const idx = Math.max(0, order.indexOf(size));
+  return BASE_PRICE + idx * STEP_PRICE;
+}
+
 export function ProductCard({ product }: { product: Product }) {
   const [size, setSize] = useState(product.sizes[0]);
+  const price = sizePrice(size);
 
   return (
     <article className="card-lift group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-card">
