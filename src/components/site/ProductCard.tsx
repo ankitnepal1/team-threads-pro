@@ -74,7 +74,7 @@ export function ProductCard({ product }: { product: Product }) {
         </div>
 
         <a
-          href={whatsappLink(`Hi Jersey Hub! I want to order: ${product.name} (Size ${size}) — Rs. ${product.price}`)}
+          href={whatsappLink(`Hi Jersey Hub! I want to order: ${product.name} (Size ${size}) — Rs. ${price}`)}
           target="_blank"
           rel="noreferrer"
           className="mt-auto inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-dark"
