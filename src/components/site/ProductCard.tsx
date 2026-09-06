@@ -12,7 +12,7 @@ export function sizePrice(size: string): number {
 }
 
 export function ProductCard({ product }: { product: Product }) {
-  const [size, setSize] = useState(product.sizes[0]);
+  const [size, setSize] = useState(product.sizes[0] ?? "S");
   const price = sizePrice(size);
 
   return (
